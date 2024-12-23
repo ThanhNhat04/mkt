@@ -1,11 +1,14 @@
 import Tool_Create from './ui/Tool_Create';
-import { Tool_Read_all } from '@/app/data';
+import { Tool_Read_all , User_Read_all } from '@/app/data';
 import { Box, Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 import DeleteButton from './ui/Tool_Delete';
 import Tool_update from './ui/Tool_Update';
 
 export default async function ToolPage() {
   let data = await Tool_Read_all()
+  let datatUser =  await  User_Read_all()
+  console.log(datatUser);
+
 
   return (
     <>
